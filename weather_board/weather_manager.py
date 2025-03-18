@@ -1,4 +1,5 @@
 import requests, json
+import matplotlib
 from matplotlib import pyplot as plt
 
 url = "https://api.open-meteo.com/v1/forecast"
@@ -19,6 +20,7 @@ def get_weather():
 
 def graph_weather(weather):
     temps = weather['hourly']['temperature_2m']
+    matplotlib.use('agg')
     plt.plot(temps, marker='o', linestyle='dashed')
     plt.xticks([i for i in range(24)])
     plt.xlabel('Time')

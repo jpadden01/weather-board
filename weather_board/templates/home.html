@@ -2,7 +2,7 @@
 
 {% block content %}
 <div id="temperatures">
-    <!-- Graph of daily temperatures will go here -->
+    <img src="{{ url_for('static', filename='temps.png') }}">
 
     <div id="temperatures-current">
         <p>Current Temperature: {{ weather['current']['temperature_2m'] }}</p>
