@@ -7,3 +7,4 @@ API: https://open-meteo.com/
 
 Libraries Used:
 - flask
+- matplotlib
