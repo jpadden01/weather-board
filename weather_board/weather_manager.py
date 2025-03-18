@@ -41,3 +41,9 @@ Weather keys:
   -sunrise
   -sunset
 '''
+
+if __name__ == '__main__':
+    # For testing
+    weather = get_weather()
+    print(json.dumps(weather, indent=2))
+    graph_weather(weather)
