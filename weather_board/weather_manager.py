@@ -19,7 +19,10 @@ def get_weather():
 
 def graph_weather(weather):
     temps = weather['hourly']['temperature_2m']
-    plt.plot(temps)
+    plt.plot(temps, marker='o', linestyle='dashed')
+    plt.xticks([i for i in range(24)])
+    plt.xlabel('Time')
+    plt.ylabel('Temperature (C)')
     plt.savefig('weather_board/static/temps.png')
 
 '''
