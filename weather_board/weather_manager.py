@@ -21,7 +21,7 @@ def get_weather():
 def graph_weather(weather):
     temps = weather['hourly']['temperature_2m']
     matplotlib.use('agg')
-    plt.plot(temps, marker='o', linestyle='dashed')
+    plt.plot(temps, marker='o', linestyle='dashed', color="#0dcaf0")
     plt.xticks([i for i in range(24)])
     plt.xlabel('Time')
     plt.ylabel('Temperature (C)')
