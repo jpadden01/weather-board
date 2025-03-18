@@ -24,22 +24,22 @@
         </div>
 
         <div class="col d-flex flex-column justify-content-around align-items-center" id="right">
-            <div class="card text-info w-75" id="precipitation">
+            <div class="card text-info w-100" id="precipitation">
                 <h2 class="card-title text-info-emphasis">Precipitation</h2>
                 <p class="card-text">Chance of Precipitation: {{ weather['daily']['precipitation_probability_max'][0] }}</p>
                 <p class="card-text">Precipitation Level: {{ weather['daily']['precipitation_sum'][0] }}</p>
             </div>
 
-            <div class="card text-info w-75" id="wind">
+            <div class="card text-info w-100" id="wind">
                 <h2 class="card-title text-info-emphasis">Wind Speed</h2>
                 <p class="card-text">Wind Speed: {{ weather['current']['wind_speed_10m'] }}</p>
                 <p class="card-text">Wind Direction: {{ weather['current']['wind_direction_10m'] }}</p>
             </div>
 
-            <div class="card text-info w-75" id="daylight">
+            <div class="card text-info w-100" id="daylight">
                 <h2 class="card-title text-info-emphasis">Daylight Hours</h2>
-                <p class="card-text">Sunrise: {{ weather['daily']['sunrise'] }}</p>
-                <p class="card-text">Sunset: {{ weather['daily']['sunset'] }}</p>
+                <p class="card-text">Sunrise: {{ weather['daily']['sunrise'][0][-5:] }}</p>
+                <p class="card-text">Sunset: {{ weather['daily']['sunset'][0][-5:] }}</p>
             </div>
         </div>
     </div>
