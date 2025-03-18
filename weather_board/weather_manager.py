@@ -1,4 +1,5 @@
 import requests, json
+from matplotlib import pyplot as plt
 
 url = "https://api.open-meteo.com/v1/forecast"
 params = {
@@ -15,6 +16,11 @@ def get_weather():
     r = requests.get(url, params=params)
     data = json.loads(r.content)
     return data
+
+def graph_weather(weather):
+    temps = weather['hourly']['temperature_2m']
+    plt.plot(temps)
+    plt.savefig('weather_board/static/temps.png')
 
 '''
 Weather keys:
